@@ -12,7 +12,9 @@ from django.core.management.utils import get_random_secret_key;print(get_random_
 
 - copy the result into the `SECRET` value between quotes.
 
-2. create virtual enviornment
+- rename `vars.example.py` to `vars.py` and set the `my_project_dir` variable to the base directory of your project.
+
+2. create virtual environment
 
 type in the following commands:
 - create the virtual enviroment: `python -m venv env`
