@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv
 
-from vars import *
+from .vars import *
 
 project_folder = os.path.expanduser(my_project_dir)  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
