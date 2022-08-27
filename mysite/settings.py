@@ -31,6 +31,8 @@ SECRET_KEY = str(os.getenv('SECRET', 'django-insecure--$99jcw&=r$uv+e@sm33al+tfc
 DEBUG = os.getenv('DEBUG', 'False') in ['True', '1']
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost', '.pythonanywhere￼.com',]
+if os.getenv('WEBSITE_DOMAIN', '') != '':
+  ALLOWED_HOSTS.append(os.getenv('WEBSITE_DOMAIN'))
 
 
 # Application definition
