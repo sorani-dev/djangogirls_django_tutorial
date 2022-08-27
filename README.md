@@ -32,6 +32,7 @@ type in the following commands:
 - create a super user for admin login
 `python manage.py createsuperuser`
 then answer all the questions.
+- move the static files. On the command line: `python manage.py collectstatic`. When asked for confirmation answer `yes`.
 
 5. run the develepment server `python manage.py runserver`. it will run on localhodt port 8000 by default.
 if the is a pid error because subprocesses are not supported, use the `--noreload` command. Note: if you do that you will have to cut and start the server again each time a file is changed.
