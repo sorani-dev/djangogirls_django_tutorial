@@ -10,12 +10,18 @@
 </svg>
 <span class="sr-only visually-hidden">Edit {{ post.title }}</span>
              </a>
+             
+             <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="" class="bi bi-x-lg" viewBox="0 0 32 32" aria-hidden="true">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+</svg><span class="sr-only visually-hidden">Delete {{ post.title }}</span></a>
          {% endif %}
     </aside>
         {% if post.published_date %}
-            <time class="date">
+	<time class="date">
                 {{ post.published_date }}
             </time>
+	{% else %}
+       	    <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
         {% endif %}
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
